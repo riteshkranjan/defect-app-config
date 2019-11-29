@@ -1,0 +1,24 @@
+zuul:
+  routes:
+    auth:
+      path: /auth/**
+      strip-prefix: false
+      service-id: auth-service
+    defect:
+      path: /defect/**
+      strip-prefix: false
+      service-id: defect-service
+    profile:
+      path: /profile/**
+      strip-prefix: false
+      service-id: user-profile-service
+ribbon:
+  ReadTimeout: 5000
+  connectTimeout: 5000
+hystrix:
+  command:
+    default: 
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 50000

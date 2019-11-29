@@ -6,7 +6,7 @@ spring:
       ddl-auto: update
   datasource:
     username: root
-    password: abcd@123
+    password: '{cipher}ec4ef20e459a989490f3a5c879896bf905c6a197a7a7c99a7025922e2a35caa5'
     driver-class-name: com.mysql.jdbc.Driver
     initialization-mode: never
   zipkin:

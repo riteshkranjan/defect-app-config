@@ -1,3 +1,17 @@
+hystrix:
+    command:
+        default:
+            circuitBreaker:
+                errorThresholdPercentage: 50
+                requestVolumeThreshold: 4
+                sleepWindowInMilliseconds: 60000
+            execution:
+                isolation:
+                    thread:
+                        timeoutInMilliseconds: 60000
+            metrics:
+                rollingStats:
+                    timeInMilliseconds: 10000
 spring:
-  datasource:
-    url: jdbc:mysql://localhost:3306/userprofiledb?createDatabaseIfNotExist=true
+    jackson:
+        default-property-inclusion: NON_NULL
